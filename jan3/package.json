@@ -1,19 +1,19 @@
 {
-	"name": "jan2",
+	"name": "jan3",
 	"version": "1.0.0",
 	"description": "",
-	"main": "mongo.js",
+	"main": "mongoHttpAuth.js",
 	"scripts": {
-		"start": "nodemon mongo.js"
+		"start": "nodemon mongoHttpAuth.js"
 	},
-	"keywords": [],
-	"author": "",
+	"author": "manish kumar",
 	"license": "ISC",
 	"dependencies": {
 		"dotenv": "^16.3.1",
 		"express": "^4.18.2",
 		"jsonwebtoken": "^9.0.2",
 		"mongoose": "^8.0.3",
-		"nodemon": "^3.0.2"
+		"nodemon": "^3.0.2",
+		"zod": "^3.22.4"
 	}
 }

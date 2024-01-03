@@ -8,6 +8,8 @@ const jwtpassword = "password123"
 
 const app = express()
 
+
+//its for middleware. Here its used to read body 
 app.use(express.json())
 
 const Users = [
