@@ -1,0 +1,29 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	/* box-sizing: border-box; */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cal-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#cal-btn, [for="secondinput"]{
+    margin-top: 16px;
+}
+
+#calculator{
+    /* border: 1px solid orange; */
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
