@@ -12,6 +12,8 @@ app.post("/todo", async (req, res) => {
 	const createPayload = req.body;
 	const parsedPayload = createTodo.safeParse(createPayload);
 
+	console.log(parsedPayload)
+
 	if (!parsedPayload.success) {
 		res.status(411).json({
 			msg: "You send the wrong input"
