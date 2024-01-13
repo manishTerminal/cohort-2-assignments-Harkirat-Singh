@@ -1,46 +1,105 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Contact from "./components/Contact";
 import About from "./components/About";
 
 function App() {
+	return (
+		<BrowserRouter>
+			<NavigationButtons />
+			<Routes>
+				<Route path="/" element={<Dashboard />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/contact" element={<Contact />} />
+			</Routes>
+		</BrowserRouter>
+	);
+}
+
+function NavigationButtons() {
 	const navigate = useNavigate();
+
 	return (
 		<div>
-			<button
-				onClick={() => {
-					navigate("/");
-				}}
-			>
-				HomeContact
-			</button>
-			<button
-				onClick={() => {
-					navigate("/About");
-				}}
-			>
-				About Us
-			</button>
-			<button
-				onClick={() => {
-					navigate("/Contact");
-				}}
-			>
-				Contact Us
-			</button>
-			<BrowserRouter>
-				<Routes>
-					<Route path="/" element={<Dashboard />}></Route>
-					<Route path="/About" element={<Contact />}></Route>
-					<Route path="/Contact" element={<About />}></Route>
-				</Routes>
-			</BrowserRouter>
+			<button onClick={() => navigate("/")}>Home</button>
+			<button onClick={() => navigate("/about")}>About Us</button>
+			<button onClick={() => navigate("/contact")}>Contact Us</button>
 		</div>
 	);
 }
 
 export default App;
+
+// import React from "react";
+// import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+// import Dashboard from "./components/Dashboard";
+// import Contact from "./components/Contact";
+// import About from "./components/About";
+
+// function App() {
+// 	const navigate = useNavigate();
+// 	return (
+// 		<div>
+// 			<button onClick={() => navigate("/")}>Home</button>
+// 			<button onClick={() => navigate("/about")}>About Us</button>
+// 			<button onClick={() => navigate("/contact")}>Contact Us</button>
+// 			<BrowserRouter>
+// 				<Routes>
+// 					<Route path="/" element={<Dashboard />} />
+// 					<Route path="/about" element={<About />} />
+// 					<Route path="/contact" element={<Contact />} />
+// 				</Routes>
+// 			</BrowserRouter>
+// 		</div>
+// 	);
+// }
+
+// export default App;
+
+// import React, { useState } from "react";
+// import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+// import Dashboard from "./components/Dashboard";
+// import Contact from "./components/Contact";
+// import About from "./components/About";
+
+// function App() {
+// 	// const navigate = useNavigate();
+// 	return (
+// 		<div>
+// 			<button
+// 				onClick={() => {
+// 					window.location.href="/"
+// 				}}
+// 			>
+// 				Home
+// 			</button>
+// 			<button
+// 				onClick={() => {
+// 					window.location.href="/about"
+// 				}}
+// 			>
+// 				About Us
+// 			</button>
+// 			<button
+// 				onClick={() => {
+// 					window.location.href= "/contact"
+// 				}}
+// 			>
+// 				Contact Us
+// 			</button>
+// 			<BrowserRouter>
+// 				<Routes>
+// 					<Route path="/" element={<Dashboard />}></Route>
+// 					<Route path="/about" element={<About />}></Route>
+// 					<Route path="/contact" element={<Contact />}></Route>
+// 				</Routes>
+// 			</BrowserRouter>
+// 		</div>
+// 	);
+// }
+
+// export default App;
 
 // function App() {
 // 	const [count, setCount] = useState(0);
